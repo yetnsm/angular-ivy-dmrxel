@@ -1,0 +1,21 @@
+<div class="titulo2" *ngIf="quantidadeContatos() > 0">Contatos da Agenda</div>
+<table class="table" [class.contatos]="quantidadeContatos() > 0" *ngIf="quantidadeContatos() > 0">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Aniversario</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contato of contatos">
+      <td>{{contato[0]}}</td>
+      <td>{{contato[1]}}</td>
+      <td>{{contato[2]}}</td>
+      <td>{{contato[3]}}</td>
+      <td (click)="remover(contato)"><button type="button" class="btn btn-danger">Excluir</button></td>
+    </tr>
+  </tbody>
+</table>

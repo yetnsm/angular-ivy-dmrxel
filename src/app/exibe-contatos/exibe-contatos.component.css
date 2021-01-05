@@ -1,0 +1,10 @@
+.titulo2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+* {
+  padding: 10px;
+}
